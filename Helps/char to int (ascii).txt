@@ -1,0 +1,9 @@
+                 //char to int convertation
+		//char to int gives ASCII values
+		//convert them to integers
+		int  i, len;
+		int intMedId=0;
+		len = strlen(medId);
+		for(i=0; i<len; i++){
+		intMedId = intMedId * 10 + ( medId[i] - '0' );
+		}

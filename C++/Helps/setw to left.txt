@@ -1,0 +1,20 @@
+#include <iostream.h>
+
+#include <iomanip.h>
+
+
+
+ 
+
+int main()
+
+{
+cout.setf(ios::left, ios::adjustfield);
+cout << setw(3) << 1 << setw(88) << 2<< '\n'; // Output two values
+
+cout.setf(ios::left, ios::adjustfield);
+cout << setw(3) << 1 << setw(3) << 2 << '\n'; // Output two values
+int a; cin>>a;
+    return 0;
+
+}

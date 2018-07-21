@@ -1,0 +1,23 @@
+#include<conio.h>
+#include<iostream.h>
+void main()
+{
+clrscr();
+
+int n;
+int *p;
+n=10;
+p=&n;
+
+cout<<"n= "<<n<<endl;
+cout<<"address of n= "<<&n<<endl;
+cout<<"p adrs= "<<p<<endl;
+cout<<"print n the content="<<*p<<endl;
+
+ getch();
+
+
+
+
+
+}

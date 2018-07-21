@@ -1,0 +1,246 @@
+2/////////////////
+
+#include<iostream.h>
+#include<conio.h>
+
+class bill{
+public:
+float ba,taxa,ta;
+void cal(float uc);
+};
+
+class water:public bill{
+public:
+void dply();
+};
+
+
+void water::dply(){cout<<ba<<endl<<taxa<<endl<<ta<<endl;}
+
+void bill::cal(float uc){
+ba=uc*2.50;
+
+if (uc>=75)
+	taxa=ba*0.06;
+else if(uc>=50)
+	taxa=ba*0.04;
+else
+	taxa=ba*0.02;
+
+ta=ba+taxa;
+
+}
+
+void main()
+{
+clrscr();
+water w1;
+int uc;
+cin>>uc;
+w1.cal(uc);
+w1.dply();
+
+getch();
+}
+
+
+3/////////
+#include<iostream.h>
+#include<conio.h>
+
+class stu{
+public:
+void set();
+
+};
+
+class lecture{
+public:
+void sets(int, int);
+};
+class inst:public stu, public lecture{};
+
+void stu::set(){
+char * nic ="00001v";
+char *name = "kamal uswatta";
+int age=22;
+cout<<nic<<endl<<name<<endl<<age<<endl;
+}
+void lecture::sets(int b,int nd){
+int ta,npa,i;
+ta =b*0.02;
+npa =nd*200;
+i= b-ta-npa;
+cout<<i;
+}
+
+void main()
+{
+clrscr();
+inst i1;
+i1.set();
+i1.sets(5000,5);
+
+getch();
+}
+
+
+
+
+4/////////
+#include<iostream.h>
+#include<conio.h>
+#include<string.h>
+class bt1 {
+public:
+char *at;
+int da,p,ia;
+void iCal(char *tempAt,int  tempDa,int tempP)
+{
+if (strcmp (tempAt,"A") == 0)
+       {int tempIa=tempDa*0.05*tempP;
+	ia=tempIa;
+       }
+else if (strcmp (tempAt,"B") == 0)
+	{
+	int tempIa=tempDa*0.06*tempP;
+	ia=tempIa;
+	}
+else if (strcmp (tempAt,"C") == 0)
+	{
+	int tempIa=tempDa*0.04*tempP;
+	ia=tempIa;
+	}
+else
+cout<<"enter valid account type"<<endl;
+
+da=tempDa;
+}
+};
+
+class bt2: public bt1{
+public:
+void display(){
+cout<<ia<<endl<<da<<endl<<ia+da;
+}
+};
+
+class bt3:public bt2{};
+
+void main()
+{clrscr();
+bt3 bt;
+char *at;
+cin>>at;
+bt.iCal(at,1200,1);
+bt.display();
+getch();
+}
+
+
+
+5////////
+#include<iostream.h>
+#include<conio.h>
+class ad{
+public:
+int w,c;
+void addCharge(int words){
+if(words<=20)
+	c=1000;
+
+else if(words<=30)
+	{
+	words=words-20;
+	c=1000+10*words;
+	}
+
+else if(words>30)
+	{
+	words=words-30;
+	c=1000+100+15*words;
+	}	
+}};
+
+class np: public ad{
+public:
+void displayc1(){
+cout<<endl<<c;
+}};
+
+class tv:public ad{
+public:
+void displayc2()
+{cout<<endl<<c;}
+};
+
+class leaflet:public ad
+{
+public:
+void displayc3()
+{cout<<endl<<c;}
+};
+
+void main()
+{clrscr();
+np np1;
+tv tv1;
+leaflet l;
+int w;
+cin>>w;
+np1.addCharge(w);
+np1.displayc1();
+//tv1.addCharge(w)
+//l.addCharge(w)
+getch();
+}
+
+6///////////////
+#include<iostream.h>
+#include<conio.h>
+class t1{
+public:
+int a,b;
+t1(int n,int m)
+{
+a=n; b=m;
+}
+void d1()
+{cout<<a<<"  "<<b<<endl;}
+};
+
+class t2 :public t1{
+public:
+int c,d;
+t2(int p ,int q, int r, int s):t1(p,q)
+{
+c=r; d=s;
+}
+void d2()
+{cout<<c<<"  "<<d<<endl;}
+};
+
+class t3: public t2{
+public:
+
+int e,f;
+t3 (int p,int q, int r, int s, int t, int u) : t2(p,q,r,s) //: t1(r,s)
+{
+e=t; f=u;
+}
+
+void d3()
+{
+cout<<e<<"  "<<f<<endl;}
+};
+
+void main()
+{clrscr();
+t3 test3(5,10,15,20,30,40);
+test3.d1();
+test3.d2();
+test3.d3();
+getch();
+}
+
+

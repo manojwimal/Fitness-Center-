@@ -1,0 +1,22 @@
+#include<iostream.h>
+#include<conio.h>
+void main()
+{
+clrscr();
+int sum=0,x,y;
+
+cout<<"Input x=";
+cin>>x;
+cout<<"Input y=";
+cin>>y;
+while(x<y)
+{
+
+sum=sum+x;
+
+x++;
+}
+cout<<sum;
+getch();
+
+}

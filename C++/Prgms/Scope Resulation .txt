@@ -1,0 +1,18 @@
+#includeconio.h
+#includeiostream.h
+int a=10;
+void main()
+
+{
+clrscr();
+cina;
+
+int a=7;
+
+coutaendl;
+
+couta;
+
+
+getch();
+}

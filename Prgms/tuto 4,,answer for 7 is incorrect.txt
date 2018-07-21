@@ -1,0 +1,425 @@
+///////2
+
+
+
+#include<conio.h>
+#include<iostream.h>
+
+class database
+{
+int id,s;
+public:
+int findts(int a,int b)
+{
+int t;
+t=a*b;
+showsize(t);
+return t;
+}
+void finddbs(int a,int b)
+{
+int t;
+t=a*b;
+showsize(t);
+
+}
+void	showsize(int b)
+{
+cout<<b;
+}
+};
+
+void main()
+{
+database d;
+int ts=d.findts(10,5);
+d.finddbs(ts,10);
+getch();
+}
+
+
+
+
+
+
+
+
+
+
+///////////////////3
+#include<conio.h>
+#include<iostream.h>
+
+class account
+{
+int an;
+double ab;
+void deposite(double);
+double withdraw(double);
+public:
+void display();
+
+};
+
+ void account::deposite(double d)
+{
+ab=d;
+}
+double account::withdraw(double w)
+{
+double a =ab;
+a=a-w;
+ab=a;
+return ab;
+}
+void account::display()
+{
+int an,i;
+double da,wa,ret;
+account a[2];
+for(i=0;i<2;i++)
+{
+cout<<"enter account no: ";
+cin>>an;
+cout<<endl<<"enter deposite ammout: ";
+cin>>da;
+a[i].deposite(da);
+cout<<endl<<"enter withdraw ammout: "<<endl;
+cin>>wa;
+ret=a[i].withdraw(wa);
+cout<<"ac No: "<<an;
+cout<<"\t"<<"New balance: "<<ret<<endl;
+}
+
+}
+
+void main()
+{
+clrscr();
+account temp;
+temp.display();
+getch();
+}
+
+
+
+
+
+
+
+
+
+
+
+////////4
+#include<conio.h>
+#include<iostream.h>
+
+class loan
+{
+public:
+float ln,lp;
+float ir;
+
+void disply(float la){
+float ia=la*ir/lp;
+float mla=la/lp;
+float tot=ia+mla;
+cout<<tot<<endl;
+
+}
+};
+
+void main()
+{
+clrscr();
+loan l1,l2;
+
+l1.ln=100;
+l1.lp=10;
+l1.ir=0.12;
+l1.disply(1000);
+l2.ln=20;
+l2.lp=10;
+l2.ir=0.10 ;
+l2.disply(5000);
+getch();
+}
+
+
+
+
+
+
+
+/////5
+#include<conio.h>
+#include<iostream.h>
+
+class student
+{
+int mm[10],tm;
+float avg;
+public:
+float addM()
+{
+int a[10];
+float tot=0;
+for(int i=0;i<10;i++)
+{
+
+cout<<endl<<"enter"<<i+1<<"module marks: ";
+cin>>a[i];
+mm[i]=a[i];
+tot=tot+a[i];
+}
+
+float av=tot/10;
+avg=av;
+return tot;
+}
+
+
+void Display(float a)
+{
+for(int i=0;i<10;i++)
+{
+cout<<mm[i]<<"\t";
+}
+
+cout<<endl<<avg<<endl<<a;
+}
+};
+
+void main()
+{
+clrscr();
+student s[10];
+for(int i=0;i<10;i++)
+{
+float tot;
+tot=s[i].addM();
+
+s[i].Display(tot);
+
+}
+getch();
+}
+
+
+
+
+
+//////////6
+#include<conio.h>
+#include<iostream.h>
+
+class mobile
+{
+int mn;
+float cc,tc,tb;
+public:
+void set()
+{
+float a,b,c;
+int uc;
+cout<<"enter unit consumed:";
+cin>>uc;
+a=uc*2;
+b=a*0.02;
+c=a+b;
+
+tb=c;
+tc=b;
+cc=a;
+}
+void calp(mobile m1,mobile m2,mobile m3)
+{
+float tot=m1.tb+m2.tb+m3.tb;
+cout<<m1.tb/tot*100<<endl;
+cout<<m2.tb/tot*100<<endl;
+cout<<m3.tb/tot*100<<endl;
+
+}
+};
+
+void main()
+{
+clrscr();
+mobile m1,m2,m3,temp;
+m1.set();
+m2.set();
+m3.set();
+
+temp.calp(m1,m2,m3);
+getch();
+}
+
+
+
+///////////////7
+#include<conio.h>
+#include<iostream.h>
+
+class shape
+{
+char name[20];
+float area;
+public:
+void aCal(int a, int b, int c, int d, int e,int f)
+{
+
+
+int p,q;
+float r;
+cout<<endl<<"Square";
+p=a*b;
+area=p;
+aShow();
+
+
+cout<<endl<<"Triangle";
+q=c*d;
+area=q;
+aShow();
+
+cout<<endl<<"Ellipse";
+r=3.14*e*f;
+area=r;
+aShow();
+}
+void aShow() const
+{
+cout<<endl<<area;
+
+}
+
+};
+
+void main()
+{
+clrscr();
+shape s1,s2,s3;
+s1.aCal(3,3,3,3,3,3);
+
+s2.aCal(2,2,2,2,2,2);
+
+s3.aCal(5,5,5,5,5,5);
+
+
+getch();
+}
+
+
+///////8
+#include<conio.h>
+#include<iostream.h>
+
+class item
+{
+static int itqty;
+public:
+static void sellitem(int a)
+{
+itqty=itqty-a;
+cout<<itqty<<endl;
+}
+
+};
+
+int item::itqty=10;
+
+
+void main()
+{
+clrscr();
+item i1, i2, i3;
+i1.sellitem(2);
+i2.sellitem(2);
+i3.sellitem(2);
+
+getch();
+}
+/////////10
+#include<conio.h>
+#include<iostream.h>
+
+class account
+{
+int acno;
+float ir,ab;
+public:
+void openAc(int a, float b, float c)
+{
+
+acno=a;
+ir=b;
+ab=c;
+
+}
+friend void calint(account a1)
+{
+float tot,ia;
+ia=a1.ab*a1.ir;
+tot=ia+a1.ab;
+cout<<ia<<endl<<tot;
+}
+
+};
+void main()
+{clrscr();
+account a1;
+a1.openAc(1000001,0.10,100);
+calint(a1);
+getch();
+}
+
+/////////////11
+#include<conio.h>
+#include<iostream.h>
+class bill;
+class discount
+{
+public:
+void discalculate(bill b1);
+
+
+};
+
+class bill
+{
+int up,qb;
+public:
+void billcal(int,int);
+
+friend void discount::discalculate(bill b1)
+{
+int da,ba;
+da=b1.up*b1.qb*0.02;
+ba=b1.up*b1.qb-da;
+cout<<da<<endl<<ba;
+}
+
+};
+
+void bill::billcal(int a, int b)
+{
+up=a;
+qb=b;
+
+}
+
+
+
+
+void main()
+{clrscr();
+bill b1;
+b1.billcal(100,5);
+discount d;
+d.discalculate(b1);
+
+getch();
+}
+
+

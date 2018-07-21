@@ -1,0 +1,16 @@
+#include<iostream.h>
+#include<conio.h>
+void main()
+{
+clrscr();
+int m;
+cout<<"input marks";
+cin>>m;
+
+if(m<50)
+	cout<<"fail";
+else
+	cout<<"pass";
+
+getch();
+}

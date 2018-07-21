@@ -1,0 +1,21 @@
+#include<iostream.h>
+#include<conio.h>
+void main()
+{
+clrscr();
+int sum=0;
+
+
+for(int c=5;c<=100;c++){
+
+sum=sum+c;
+
+c++;
+} 
+
+
+cout<<sum;
+
+getch();
+
+}

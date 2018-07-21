@@ -1,0 +1,1 @@
+char buffer[100] = {0}; cout<<endl<<buffer;

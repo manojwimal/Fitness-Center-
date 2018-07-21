@@ -1,0 +1,107 @@
+2.................
+
+#include<iostream.h>
+#include<conio.h>
+class emp{
+int g,bs,ot;
+public:
+virtual void fndi(int a, int b, int c){
+g=a;bs=b;ot=c;
+int ein;
+if (g==1)
+       {
+	ein=bs+ot*250;}
+else if(g==2)
+       {
+       ein=bs+ot*150;}
+
+cout<<ein<<endl;
+}
+
+};
+
+class bus:public emp{
+int it,iq,ip;
+
+public:
+void fndi(int a, int b, int c){
+it=a,iq=b,ip=c;
+int ta,bi;
+
+cout<<"1.Luxury"<<endl<<"2.Normal";
+cout<<endl<<"enter item type: "<<endl;
+int t;
+cin>>t;
+if(t==1)
+	{ta=ip*iq*0.02;
+	bi=ip*iq-ta;
+	}
+else if(t==2)
+	{ta=ip*iq*0.01;
+	bi=ip*iq-ta;
+	}
+cout<<ta<<endl<<bi<<endl;
+}  };
+
+
+
+void main()
+{
+clrscr();
+emp *p;
+emp e1,e2;
+bus b1;
+p=&e1; p->fndi(1,6,8);
+getch();
+p=&e2; p->fndi(2,20,30);
+
+p=&b1; p->fndi(100,50,100);
+getch();
+}
+
+
+
+3............
+
+#include<iostream.h>
+#include<conio.h>
+class emp{
+int g,bs,ot;
+public:
+virtual void fndi(int a, int b, int c)=0;
+
+
+};
+
+class bus:public emp{
+int it,iq,ip;
+
+public:
+void fndi(int a, int b, int c){
+it=a,iq=b,ip=c;
+int ta,bi;
+
+cout<<"1.Luxury"<<endl<<"2.Normal";
+cout<<endl<<"enter item type: "<<endl;
+int t;
+cin>>t;
+if(t==1)
+	{ta=ip*iq*0.02;
+	bi=ip*iq-ta;
+	}
+else if(t==2)
+	{ta=ip*iq*0.01;
+	bi=ip*iq-ta;
+	}
+cout<<ta<<endl<<bi<<endl;
+}  };
+void main()
+{
+clrscr();
+emp *p;
+bus b1;
+p=&b1; p->fndi(100,50,100);
+getch();
+}
+
+

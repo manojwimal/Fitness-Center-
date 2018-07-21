@@ -1,0 +1,20 @@
+#include<iostream.h>
+#include<conio.h>
+void main()
+{
+clrscr();
+
+int opt;
+cout<<"Enter Channel NO=";
+cin>>opt;
+switch(opt)
+{
+case 1: cout<<"RUpawahini"; break;
+case 2: cout<<"ITN"; break;
+case 3: cout<<"swarnawahini"; break;
+case 4: cout<<"derana"; break;
+default: cout<<"Invalid INput";
+}
+getch();
+
+}

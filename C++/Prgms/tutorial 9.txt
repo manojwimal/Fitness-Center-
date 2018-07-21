@@ -1,0 +1,196 @@
+3........
+1//
+#include<iostream.h>
+#include<conio.h>
+class mycal{
+int x,y;
+public:
+void set(){
+cin>>x>>y;
+}
+void show()
+{
+cout<<x<<"\t"<<y;
+}
+void operator -(){
+x=-x;
+y=-y;
+}
+
+  };
+void main()
+{
+clrscr();
+mycal c;
+c.set();
+-c;
+c.show();
+getch();
+}
+
+2//
+#include<iostream.h>
+#include<conio.h>
+class mycal{
+int x,y;
+public:
+void set(){
+cin>>x>>y;
+}
+void show()
+{
+cout<<x<<"\t"<<y;
+}
+mycal operator -(){
+mycal t;
+t.x=-x;
+t.y=-y;
+return t;
+}
+
+  };
+void main()
+{
+clrscr();
+mycal c,t;
+c.set();
+t=-c;
+t.show();
+getch();
+}
+
+
+3//
+#include<iostream.h>
+#include<conio.h>
+class mycal{
+int x,y;
+public:
+void set(){
+cin>>x>>y;
+}
+void show()
+{
+cout<<x<<"\t"<<y;
+}
+friend mycal operator -(mycal c){
+mycal t;
+t.x=-c.x;
+t.y=-c.y;
+return t;
+}
+
+  };
+void main()
+{
+clrscr();
+mycal c,t;
+c.set();
+t=-c;
+t.show();
+getch();
+}
+
+
+
+
+
+
+
+4...........
+1//
+#include<iostream.h>
+#include<conio.h>
+class myop{
+int x,y;
+public:
+void set(){
+cin>>x>>y;
+}
+void show()
+{
+cout<<x<<"\t"<<y;
+}
+void operator +(myop g){
+cout<<x+g.x<<endl;
+cout<<y+g.y;
+}
+
+  };
+void main()
+{
+clrscr();
+myop f,g;
+f.set();
+g.set();
+f+g;
+getch();
+}
+
+2//
+#include<iostream.h>
+#include<conio.h>
+class myop{
+int x,y;
+public:
+void set(){
+cin>>x>>y;
+}
+void show()
+{
+cout<<x<<"\t"<<y;
+}
+myop operator +(myop g){
+myop t;
+t.x=x+g.x<<endl;
+t.y=y+g.y;
+return t;
+}
+
+  };
+void main()
+{
+clrscr();
+myop f,g,t;
+f.set();
+g.set();
+t=f+g;
+t.show();
+getch();
+}
+
+
+3//
+#include<iostream.h>
+#include<conio.h>
+class myop{
+int x,y;
+public:
+void set(){
+cin>>x>>y;
+}
+void show()
+{
+cout<<x<<"\t"<<y;
+}
+myop operator +();
+friend myop operator +(myop a,myop b){
+myop t;
+t.x=a.x+b.x;
+t.y=a.y+b.y;
+return t;
+}
+
+  };
+void main()
+{
+clrscr();
+myop f,g,t;
+f.set();
+g.set();
+t=f+g;
+t.show();
+getch();
+}
+
+
